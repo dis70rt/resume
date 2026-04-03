@@ -1,44 +1,26 @@
-%-------------------------
-% Resume in Latex
-% Author : Audric Serador
-% Inspired by: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{fontawesome5}
-\usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{graphicx}
-\usepackage{mwe} % for blindtext and example-image-a in example
-\usepackage{wrapfig}
 
-\input{glyphtounicode}
-
-% Custom font
-\usepackage[default]{lato}
+\usepackage{fontawesome5}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -47,43 +29,172 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Section formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+  \vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------%
 % Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
 \begin{document}
-\include{custom-commands}
 
-%-------------------------------------------%
-%%%%%%  RESUME STARTS HERE  %%%%%
+% HEADER
+\begin{center}
+    \textbf{\Huge \scshape Saikat Das} \\ \vspace{5pt}
+    \small 
+    \faPhone \ +91 6202051066 \ $|$ \ 
+    \faEnvelope \ \href{mailto:sd.saikat369@gmail.com}{sd.saikat369@gmail.com} \ $|$ \ 
+    \faLinkedin \ \href{https://linkedin.com/in/in-saikat}{LinkedIn} \ $|$ \ 
+    \faGithub \ \href{https://github.com/dis70rt}{GitHub} \ $|$ \ 
+    \faCode \ \href{https://codeforces.com/profile/saikat_das}{Codeforces}
+\end{center}
 
-%----------HEADING----------%
-\input{src/heading}
+% EDUCATION
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology (BHU), Varanasi}{Varanasi, India}
+      {Bachelor of Technology in Mining Engineering; \textbf{CGPA: 8.39/10.0}}{July 2023 to May 2027}
+    \resumeSubheading
+      {DPS Dhanbad}{Dhanbad, India}
+      {CBSE Class XII: \textbf{87.20\%}}{2022}
+  \resumeSubHeadingListEnd
 
-%-----------EDUCATION-----------%
-\input{src/education.tex}
-
-%-----------EXPERIENCE-----------%
-\input{src/experience}
-
-%-----------PROJECTS-----------%
-\input{src/projects}
-
-%-----------SKILLS-----------%
-\input{src/skills.tex}
-
-%-----------ACHIEVEMENTS-----------%
-\input{src/achievements}
-
-%-----------POR-----------%
-\input{src/socialEngagements}
+% TECHNICAL SKILLS
+\section{Technical Skills}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages}{: Go, C++, Python, Dart} \\
+        \textbf{Backend Systems}{: REST APIs, Microservices, gRPC, Kafka} \\
+        \textbf{Databases}{: PostgreSQL, Redis} \\
+        \textbf{Tools \& Platforms}{: Flutter, Git, Docker, Linux, Postman, k6}
+}}
+\end{itemize}
 
 
-%-------------------------------------------%
+% EXPERIENCE
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Flutter Developer Intern}{Dec 2024 to Feb 2025}
+      {\href{https://www.linkedin.com/company/vrajpath-itech-llp/}{Vrajpath iTech LLP}}{Dhanbad, India}
+      \resumeItemListStart
+        \resumeItem{Improved application performance by changing state management and reducing API call overhead by 30\%.}
+        \resumeItem{Added Google Maps SDK and Razorpay payment gateway for secure transactions.}
+        \resumeItem{Fixed Play Store privacy and permission issues to meet Android 13 policies and pass the application review.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+% PROJECTS
+\section{Projects}
+    \resumeSubHeadingListStart
+    
+      \resumeProjectHeading
+          {\textbf{TradeOrders} $|$ \emph{Go, Kafka, PostgreSQL, Redis, Docker} $|$ \href{https://github.com/dis70rt/TradeOrders}{\color{blue}\underline{GitHub}}}
+          {Oct 2025}
+          \resumeItemListStart
+            \resumeItem{Built a trade clearing engine with four microservices (API, Matching, Database, Stream) communicating through Kafka topics for order ingestion and trade execution.}
+            \resumeItem{Handled 18.8k requests per second with 0\% failure rate and p95 latency of 219ms, up from 1k requests per second in the initial synchronous design. Validated with k6 load tests.}
+            \resumeItem{Used Kafka key based partitioning so all orders for a given instrument go to the same partition, allowing lock free sequential matching per order book.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Bluppi} $|$ \emph{Go, gRPC, PostgreSQL, Redis, Solr, Flutter} $|$ \href{https://github.com/dis70rt/bluppi-backend}{\color{blue}\underline{Backend}} \href{https://github.com/dis70rt/bluppi-frontend}{\color{blue}\underline{Frontend}}}
+          {May 2025}
+          \resumeItemListStart
+            \resumeItem{Built a distributed music streaming backend in Go with synchronized playback across devices using PTP style clock probing and quorum based buffer readiness.}
+            \resumeItem{Wrote a presence gateway with persistent gRPC streams, tested to 51k concurrent connections with zero errors. Events fan out through Redis PubSub.}
+            \resumeItem{Indexed a 500GB music catalog in Solr with field boosted search and cursor pagination. Notifications flow through Redis Streams to Firebase Cloud Messaging.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{QQL} $|$ \emph{Python, PostgreSQL} $|$ \href{https://github.com/dis70rt/qql}{\color{blue}\underline{GitHub}}}
+          {Aug 2025}
+          \resumeItemListStart
+            \resumeItem{Built an interactive SQL shell on top of PostgreSQL with approximate query support using APPROX, ERROR, and CONFIDENCE keywords for controlled estimation.}
+            \resumeItem{Runs a pilot query to determine sample size, then executes on a sample instead of full table scan. Benchmarked speed and accuracy tradeoffs across AVG, SUM, and COUNT aggregates.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{WizFlow} $|$ \emph{Python, FastAPI, Redis}}
+          {Apr 2025}
+          \resumeItemListStart
+            \resumeItem{Built an asynchronous workflow engine with a drag and drop React interface. FastAPI backend with Redis based task queuing and real time execution logs.}
+            \resumeItem{\textbf{Won 2nd Place at Nutanix Hackathon 2025}.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{SubPaper} $|$ \emph{Flutter, Go} $|$ \href{https://app.saikat.in/subpaper}{\color{blue}\underline{Play Store}}}
+          {Apr 2024}
+          \resumeItemListStart
+            \resumeItem{Published a Flutter wallpaper app on the Play Store with over 300 downloads and a 4.5 rating.}
+            \resumeItem{Pulls content from Reddit APIs and uses AdMob for monetization.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+% LEADERSHIP
+\section{Leadership}
+    \resumeSubHeadingListStart
+    
+      \resumeProjectHeading
+          {\textbf{Event Executive} $|$ \emph{Club of Programmers, IIT (BHU)}}{2024 to Present}
+          \resumeItemListStart
+            \resumeItem{Mentored over 200 students in web and mobile development workshops.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{Creative Executive} $|$ \emph{Kashiyatra, IIT (BHU)}}{2024}
+          \resumeItemListStart
+            \resumeItem{Improved creative presence across 9 events for Kashiyatra to increase audience engagement.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+% ACHIEVEMENTS
+\section{Achievements}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Nutanix Hackathon} $|$ \emph{2nd Place}}{2025}
+      \resumeProjectHeading
+          {\textbf{\href{https://codeforces.com/profile/saikat_das}{Codeforces}} $|$ \emph{\href{https://codeforces.com/profile/saikat_das}{\color{blue}\underline{Pupil}} (Max Rating: \textbf{1282}), over 150 Problems Solved}}{Present}
+      \resumeProjectHeading
+          {\textbf{e6Data Hackathon} $|$ \emph{Special Mention}}{2024}
+      \resumeProjectHeading
+          {\textbf{JEE Advanced 2023} $|$ \emph{AIR 13757 (Top 9\% of qualified candidates)}}{2023}
+      \resumeProjectHeading
+          {\textbf{JEE Mains 2023} $|$ \emph{AIR 8166 (Top 1\% of 1.1 Million candidates)}}{2023}
+    \resumeSubHeadingListEnd
+
 \end{document}

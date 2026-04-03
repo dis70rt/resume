@@ -3,10 +3,11 @@
 \resumeSubHeadingListStart
 
     \resumeProjectHeading
-    {\textbf{Synqit} $|$ \emph{Flutter, Python, Firebase, PostgreSQL}} {\href{https://github.com/dis70rt/ss-yt}{(dis70rt/synqit)}} \\
+    {\textbf{Bluppi} $|$ \emph{Go, gRPC, Redis, Solr, PostgreSQL, Memgraph, Flutter}} {\href{https://github.com/dis70rt/bluppi-backend}{(dis70rt/bluppi-backend)}} \\
     \resumeItemListStart
-        \resumeItem{Engineered a novel cross-platform application for synchronized music playback across diverse devices, utilizing both internet and local network (Bluetooth/Wi-Fi) protocols for seamless audio experiences.}
-        \resumeItem{Architected a robust and scalable backend, incorporating industry best practices to ensure high availability and optimal performance for a dynamic user base.}
+        \resumeItem{Architected a distributed backend with microsecond-precision synchronized multi-device playback using PTP-style clock synchronization and quorum-based buffer readiness.}
+        \resumeItem{Developed a scalable real-time presence system with persistent gRPC streams handling 50k+ concurrent connections and O(1) event routing via Redis PubSub.}
+        \resumeItem{Integrated a 500GB music catalog using Solr for fast eDisMax queries, alongside an event-driven notification pipeline using Redis Streams and Firebase.}
     \resumeItemListEnd
 
     \vspace{3mm}
@@ -21,10 +22,10 @@
     \vspace{3mm}
 
     \resumeProjectHeading
-    {\textbf{SS-YT} $|$ \emph{Python, FFMPEG, Flask, HTML, CSS, Docker}}{\href{https://github.com/dis70rt/ss-yt}{(dis70rt/ss-yt)}} \\
+    {\textbf{SS-YT} $|$ \emph{Python, Flask, yt-dlp, FFMPEG}}{\href{https://github.com/dis70rt/ss-yt}{(dis70rt/ss-yt)}} \\
     \resumeItemListStart
-        \resumeItem{Developed a versatile YouTube video downloader with API integration, uniquely enabling 1080p video downloads, a feature surpassing many existing solutions.}
-        \resumeItem{Containerized the application using Docker, ensuring seamless deployment and cross-platform compatibility for enhanced accessibility.}
+        \resumeItem{Developed a versatile YouTube downloader API offering customizable downloads up to 1080p, audio-only MP3 formats, embedded subtitles, and direct streamable links.}
+        \resumeItem{Optimized asynchronous downloads using Gunicorn and securely exposed the API to the internet via Cloudflare Tunnel as a robust port forwarding alternative.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
