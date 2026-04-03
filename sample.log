@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.4.3)  3 APR 2026 19:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.4.3)  3 APR 2026 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -343,13 +343,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 st/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/share/texlive/texmf-dist/fon
 ts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/share/texlive/texmf-dist/fonts/enc
 /dvips/fontawesome5/fa5brands0.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
-ps/fontawesome5/fa5free0.enc}]
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 4.08003pt, for example:
-(fancyhdr)                \setlength{\footskip}{4.08003pt}.
-
-[2] (./sample.aux)
+ps/fontawesome5/fa5free0.enc}] (./sample.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -357,13 +351,13 @@ Package rerunfilecheck Info: File `sample.out' has not changed.
 (rerunfilecheck)             Checksum: C31F335BC41FC163ADBC90FEDF6C6D30;586.
  ) 
 Here is how much of TeX's memory you used:
- 11916 strings out of 478087
- 210562 string characters out of 5842651
- 1882388 words of memory out of 6000000
- 31883 multiletter control sequences out of 15000+600000
- 519145 words of font info for 54 fonts, out of 8000000 for 9000
+ 11913 strings out of 478087
+ 210537 string characters out of 5842651
+ 1888388 words of memory out of 6000000
+ 31882 multiletter control sequences out of 15000+600000
+ 518847 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,11n,76p,283b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,76p,289b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Br
 ands-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5
 /FontAwesome5Free-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
@@ -374,10 +368,10 @@ mbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on sample.pdf (2 pages, 140794 bytes).
+Output written on sample.pdf (1 page, 140688 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

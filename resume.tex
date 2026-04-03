@@ -109,9 +109,9 @@
       {Flutter Developer Intern}{Dec 2024 to Feb 2025}
       {\href{https://www.linkedin.com/company/vrajpath-itech-llp/}{Vrajpath iTech LLP}}{Dhanbad, India}
       \resumeItemListStart
-        \resumeItem{Improved application performance by changing state management and reducing API call overhead by 30\%.}
-        \resumeItem{Added Google Maps SDK and Razorpay payment gateway for secure transactions.}
-        \resumeItem{Fixed Play Store privacy and permission issues to meet Android 13 policies and pass the application review.}
+        \resumeItem{Improved app performance by changing state management, reducing \textbf{API call overhead by 30\%}.}
+        \resumeItem{Integrated \textbf{Google Maps SDK} and \textbf{Razorpay} payment gateway for secure transactions.}
+        \resumeItem{Fixed privacy and permission issues to meet \textbf{Android 13} policies and pass Play Store review.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -121,45 +121,45 @@
     \resumeSubHeadingListStart
     
       \resumeProjectHeading
-          {\textbf{TradeOrders} $|$ \emph{Go, Kafka, PostgreSQL, Redis, Docker} $|$ \href{https://github.com/dis70rt/TradeOrders}{\color{blue}\underline{GitHub}}}
+          {\textbf{TradeOrders -- Order Matching Engine} $|$ \emph{Go, Kafka, PostgreSQL, Redis, Docker} $|$ \href{https://github.com/dis70rt/TradeOrders}{\color{blue}\underline{GitHub}}}
           {Oct 2025}
           \resumeItemListStart
-            \resumeItem{Built a trade clearing engine with four microservices (API, Matching, Database, Stream) communicating through Kafka topics for order ingestion and trade execution.}
-            \resumeItem{Handled 18.8k requests per second with 0\% failure rate and p95 latency of 219ms, up from 1k requests per second in the initial synchronous design. Validated with k6 load tests.}
-            \resumeItem{Used Kafka key based partitioning so all orders for a given instrument go to the same partition, allowing lock free sequential matching per order book.}
+            \resumeItem{Built a trade clearing engine using \textbf{four microservices} and \textbf{Kafka topics} for order ingestion.}
+            \resumeItem{Scaled throughput to \textbf{18.8k requests/sec} with p95 latency of \textbf{219ms}, validated using \textbf{k6 load tests}.}
+            \resumeItem{Used \textbf{Kafka key partitioning} for lock free sequential order matching per order book.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Bluppi} $|$ \emph{Go, gRPC, PostgreSQL, Redis, Solr, Flutter} $|$ \href{https://github.com/dis70rt/bluppi-backend}{\color{blue}\underline{Backend}} \href{https://github.com/dis70rt/bluppi-frontend}{\color{blue}\underline{Frontend}}}
+          {\textbf{Bluppi -- Shared Music Playback} $|$ \emph{Go, gRPC, PostgreSQL, Redis, Solr, Flutter} $|$ \href{https://github.com/dis70rt/bluppi-backend}{\color{blue}\underline{Backend}} \href{https://github.com/dis70rt/bluppi-frontend}{\color{blue}\underline{Frontend}}}
           {May 2025}
           \resumeItemListStart
-            \resumeItem{Built a distributed music streaming backend in Go with synchronized playback across devices using PTP style clock probing and quorum based buffer readiness.}
-            \resumeItem{Wrote a presence gateway with persistent gRPC streams, tested to 51k concurrent connections with zero errors. Events fan out through Redis PubSub.}
-            \resumeItem{Indexed a 500GB music catalog in Solr with field boosted search and cursor pagination. Notifications flow through Redis Streams to Firebase Cloud Messaging.}
+            \resumeItem{Built a distributed music streaming backend in \textbf{Go} with \textbf{PTP style clock synchronization}.}
+            \resumeItem{Developed a real time presence gateway with \textbf{gRPC} handling \textbf{51k concurrent connections}.}
+            \resumeItem{Developed an \textbf{ephemeral chat system} utilizing \textbf{Redis Pub/Sub} for real-time messaging.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{QQL} $|$ \emph{Python, PostgreSQL} $|$ \href{https://github.com/dis70rt/qql}{\color{blue}\underline{GitHub}}}
+          {\textbf{QQL -- Approximate Query Processing Shell} $|$ \emph{Python, PostgreSQL} $|$ \href{https://github.com/dis70rt/qql}{\color{blue}\underline{GitHub}}}
           {Aug 2025}
           \resumeItemListStart
-            \resumeItem{Built an interactive SQL shell on top of PostgreSQL with approximate query support using APPROX, ERROR, and CONFIDENCE keywords for controlled estimation.}
-            \resumeItem{Runs a pilot query to determine sample size, then executes on a sample instead of full table scan. Benchmarked speed and accuracy tradeoffs across AVG, SUM, and COUNT aggregates.}
+            \resumeItem{Developed an interactive SQL shell focusing on \textbf{data sampling techniques} for faster query estimation.}
+            \resumeItem{Achieved \textbf{10x speedup} on large datasets by implementing statistical sampling with \textbf{controlled error bounds}.}
           \resumeItemListEnd
           
       \resumeProjectHeading
-          {\textbf{WizFlow} $|$ \emph{Python, FastAPI, Redis}}
+          {\textbf{WizFlow -- Workflow Engine} $|$ \emph{Python, FastAPI, Redis}}
           {Apr 2025}
           \resumeItemListStart
-            \resumeItem{Built an asynchronous workflow engine with a drag and drop React interface. FastAPI backend with Redis based task queuing and real time execution logs.}
-            \resumeItem{\textbf{Won 2nd Place at Nutanix Hackathon 2025}.}
+            \resumeItem{Built an asynchronous workflow engine using \textbf{React}, \textbf{FastAPI}, and \textbf{Redis} task queuing.}
+            \resumeItem{\textbf{Won 2nd Place at Nutanix Hackathon 2025} for system reliability and real time execution logs.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{SubPaper} $|$ \emph{Flutter, Go} $|$ \href{https://app.saikat.in/subpaper}{\color{blue}\underline{Play Store}}}
+          {\textbf{SubPaper -- Reddit Wallpapers App} $|$ \emph{Flutter, Go} $|$ \href{https://app.saikat.in/subpaper}{\color{blue}\underline{Play Store}}}
           {Apr 2024}
           \resumeItemListStart
-            \resumeItem{Published a Flutter wallpaper app on the Play Store with over 300 downloads and a 4.5 rating.}
-            \resumeItem{Pulls content from Reddit APIs and uses AdMob for monetization.}
+            \resumeItem{Published a \textbf{Flutter} wallpaper app on the Play Store with \textbf{over 300 downloads} and a 4.5 rating.}
+            \resumeItem{Integrated \textbf{Reddit APIs} for dynamic content delivery and \textbf{AdMob} for monetization.}
           \resumeItemListEnd
           
     \resumeSubHeadingListEnd
