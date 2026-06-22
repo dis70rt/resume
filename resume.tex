@@ -69,13 +69,11 @@
 
 % HEADER
 \begin{center}
-    \textbf{\Huge \scshape Saikat Das} \\ \vspace{5pt}
-    \small 
-    \faPhone \ +91 6202051066 \ $|$ \ 
-    \faEnvelope \ \href{mailto:sd.saikat369@gmail.com}{sd.saikat369@gmail.com} \ $|$ \ 
-    \faLinkedin \ \href{https://linkedin.com/in/in-saikat}{LinkedIn} \ $|$ \ 
-    \faGithub \ \href{https://github.com/dis70rt}{GitHub} \ $|$ \ 
-    \faCode \ \href{https://codeforces.com/profile/saikat_das}{Codeforces}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Huge \scshape Saikat Das} & \small \faPhone \ +91 6202051066 \\
+  \small \faGlobe \ \href{https://saikat.in}{saikat.in} \ $|$ \ \faPen \ \href{https://blog.saikat.in}{blog.saikat.in} & \small \faEnvelope \ \href{mailto:sd.saikat369@gmail.com}{sd.saikat369@gmail.com} \\
+  \small \faLinkedin \ \href{https://linkedin.com/in/in-saikat}{LinkedIn} \ $|$ \ \faGithub \ \href{https://github.com/dis70rt}{GitHub} \ $|$ \ \faCode \ \href{https://leetcode.com}{LeetCode} & \small \faMapMarker* \ Varanasi, India \\
+\end{tabular*}
 \end{center}
 
 % EDUCATION
@@ -93,12 +91,14 @@
 \section{Technical Skills}
     \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-        \textbf{Languages}{: Go, C++, Python, Dart} \\
-        \textbf{Backend Systems}{: REST APIs, Microservices, gRPC, Kafka} \\
-        \textbf{Databases}{: PostgreSQL, Redis} \\
-        \textbf{Tools \& Platforms}{: Flutter, Git, Docker, Linux, Postman, k6}
-}}
-\end{itemize}
+        \begin{tabular}{@{}p{1.6in} l@{}}
+            \textbf{Languages} & Go, Python, C++, Dart \\
+            \textbf{Backend} & Microservices, REST APIs, gRPC, Kafka \\
+            \textbf{Databases \& Cache} & PostgreSQL, Redis \\
+            \textbf{DevOps \& Tools} & Docker, Linux, Git, Postman, k6, Flutter, React, FastAPI
+        \end{tabular}
+    }}
+    \end{itemize}
 
 
 % EXPERIENCE
@@ -106,18 +106,19 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Software Engineering Intern}{June 2026 to Present}
+      {Software Engineering Intern}{Jun 2026 -- Jul 2026}
       {Tripple Double}{Remote}
       \resumeItemListStart
-        \resumeItem{Developed \textbf{Flutter} web app for AI \textbf{OCR} pipeline to enable rapid human verification of \textbf{FIBA} scoresheets.}
-        \resumeItem{Integrated frontend to ingest verified records, automating real-time database updates for player stats and scores.}
+        \resumeItem{Built \textbf{Flutter} web app interfacing with AI \textbf{OCR} pipeline for \textbf{FIBA} scoresheet verification.}
+        \resumeItem{Automated real-time \textbf{PostgreSQL} database updates for player stats upon verification.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Flutter Developer Intern}{Dec 2024 to Feb 2025}
       {\href{https://www.linkedin.com/company/vrajpath-itech-llp/}{Vrajpath iTech LLP}}{Remote}
       \resumeItemListStart
-        \resumeItem{Reduced \textbf{API overhead by 30\%} via state management and integrated \textbf{Google Maps} and \textbf{Razorpay} SDKs.}
+        \resumeItem{Cut API calls by \textbf{$\sim$30\%} via \textbf{Riverpod} state caching (measured via \textbf{Dart DevTools}).}
+        \resumeItem{Integrated \textbf{Google Maps} and \textbf{Razorpay} SDKs.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -130,42 +131,41 @@
           {\textbf{TradeOrders -- Order Matching Engine} $|$ \emph{Go, Kafka, PostgreSQL, Redis, Docker} $|$ \href{https://github.com/dis70rt/TradeOrders}{\color{blue}\underline{GitHub}}}
           {Oct 2025}
           \resumeItemListStart
-            \resumeItem{Built a trade clearing engine using \textbf{four microservices} and \textbf{Kafka topics} for order ingestion.}
-            \resumeItem{Scaled throughput to \textbf{18.8k requests/sec} with p95 latency of \textbf{219ms}, validated using \textbf{k6 load tests}.}
-            \resumeItem{Used \textbf{Kafka key partitioning} for lock free sequential order matching per order book.}
+            \resumeItem{Built event-driven trade clearing engine using \textbf{Go} microservices and \textbf{Kafka}.}
+            \resumeItem{Achieved \textbf{18.2k req/sec} throughput and \textbf{231ms p95} latency (k6 load test, \textbf{7624 VUs}, Intel i5).}
+            \resumeItem{Implemented \textbf{Kafka key partitioning} for lock-free, sequential order matching.}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{Bluppi -- Shared Music Playback} $|$ \emph{Go, gRPC, PostgreSQL, Redis, Solr, Flutter} $|$ \href{https://github.com/dis70rt/bluppi-backend}{\color{blue}\underline{Backend}} \href{https://github.com/dis70rt/bluppi-frontend}{\color{blue}\underline{Frontend}}}
           {May 2025}
           \resumeItemListStart
-            \resumeItem{Built a distributed music streaming backend in \textbf{Go} with \textbf{PTP style clock synchronization}.}
-            \resumeItem{Developed a real time presence gateway with \textbf{gRPC} handling \textbf{51k concurrent connections}.}
-            \resumeItem{Developed an \textbf{ephemeral chat system} utilizing \textbf{Redis Pub/Sub} for real-time messaging.}
+            \resumeItem{Built distributed \textbf{Go} music streaming backend with \textbf{PTP-style clock sync}.}
+            \resumeItem{Sustained \textbf{51k+ concurrent connections} (0 errors, \textbf{15ms p99} connect) via \textbf{gRPC} presence gateway.}
+            \resumeItem{Validated performance via 5min custom \textbf{Go} load client on Intel i5-13500HX (16GB RAM).}
+            \resumeItem{Implemented ephemeral real-time messaging via \textbf{Redis Pub/Sub}.}
           \resumeItemListEnd
 
-      % \resumeProjectHeading
-      %     {\textbf{QQL -- Approximate Query Processing Shell} $|$ \emph{Python, PostgreSQL} $|$ \href{https://github.com/dis70rt/qql}{\color{blue}\underline{GitHub}}}
-      %     {Aug 2025}
-      %     \resumeItemListStart
-      %       \resumeItem{Developed an interactive SQL shell focusing on \textbf{data sampling techniques} for faster query estimation.}
-      %       \resumeItem{Achieved \textbf{10x speedup} on large datasets by implementing statistical sampling with \textbf{controlled error bounds}.}
-      %     \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{QQL -- Approximate Query Processing Shell} $|$ \emph{Python, PostgreSQL} $|$ \href{https://github.com/dis70rt/qql}{\color{blue}\underline{GitHub}}}
+          {Aug 2025}
+          \resumeItemListStart
+            \resumeItem{Built interactive \textbf{SQL shell} using \textbf{statistical sampling} to achieve \textbf{10x speedup} with controlled error bounds.}
+          \resumeItemListEnd
           
       \resumeProjectHeading
           {\textbf{WizFlow -- Workflow Engine} $|$ \emph{Python, FastAPI, Redis}}
           {Apr 2025}
           \resumeItemListStart
-            \resumeItem{Built an asynchronous workflow engine using \textbf{React}, \textbf{FastAPI}, and \textbf{Redis} task queuing.}
-            \resumeItem{\textbf{Won 2nd Place at Nutanix Hackathon 2025} for system reliability and real time execution logs.}
+            \resumeItem{Built asynchronous workflow engine with \textbf{React}, \textbf{FastAPI}, and \textbf{Redis} task queues.}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{SubPaper -- Reddit Wallpapers App} $|$ \emph{Flutter, Go} $|$ \href{https://app.saikat.in/subpaper}{\color{blue}\underline{Play Store}}}
           {Apr 2024}
           \resumeItemListStart
-            \resumeItem{Published a \textbf{Flutter} wallpaper app on the Play Store with \textbf{over 300 downloads} and a 4.5 rating.}
-            \resumeItem{Integrated \textbf{Reddit APIs} for dynamic content delivery and \textbf{AdMob} for monetization.}
+            \resumeItem{Published \textbf{Flutter} wallpaper app to Play Store (\textbf{300+ downloads}, 4.5 rating).}
+            \resumeItem{Integrated \textbf{Reddit APIs} for dynamic content and \textbf{AdMob} for monetization.}
           \resumeItemListEnd
           
     \resumeSubHeadingListEnd
@@ -177,14 +177,14 @@
       \resumeProjectHeading
           {\textbf{Event Executive} $|$ \emph{Club of Programmers, IIT (BHU)}}{2024 to Present}
           \resumeItemListStart
-            \resumeItem{Mentored over 200 students in web and mobile development workshops.}
+            \resumeItem{Delivered \textbf{Flutter} and \textbf{REST API} workshops to \textbf{200+} students across multiple sessions.}
           \resumeItemListEnd
           
-      \resumeProjectHeading
-          {\textbf{Creative Executive} $|$ \emph{Kashiyatra, IIT (BHU)}}{2024}
-          \resumeItemListStart
-            \resumeItem{Improved creative presence across 9 events for Kashiyatra to increase audience engagement.}
-          \resumeItemListEnd
+      % \resumeProjectHeading
+      %     {\textbf{Creative Executive} $|$ \emph{Kashiyatra, IIT (BHU)}}{2024}
+      %     \resumeItemListStart
+      %       \resumeItem{Improved creative presence across 9 events for Kashiyatra to increase audience engagement.}
+      %     \resumeItemListEnd
           
     \resumeSubHeadingListEnd
 
@@ -196,7 +196,7 @@
       \resumeProjectHeading
           {\textbf{Nutanix Hackathon} $|$ \emph{2nd Place (Real-time Workflow Engine)}}{2025}
       \resumeProjectHeading
-          {\textbf{\href{https://codeforces.com/profile/saikat_das}{Codeforces}} $|$ \emph{\href{https://codeforces.com/profile/saikat_das}{\color{blue}\underline{Pupil}} (Max Rating: \textbf{1282}), over 150 Problems Solved}}{Present}
+          {\textbf{\href{https://leetcode.com}{LeetCode}} \emph{(Rating: \textbf{1681}, \textbf{234} Solved)} $|$ \textbf{\href{https://codeforces.com/profile/saikat_das}{Codeforces}} \emph{(Max Rating: \textbf{1282}, \textbf{150+} Solved)}}{Present}
       \resumeProjectHeading
           {\textbf{e6Data Hackathon} $|$ \emph{Special Mention for QQL System}}{2024}
       \resumeProjectHeading
