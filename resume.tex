@@ -91,11 +91,11 @@
 \section{Technical Skills}
     \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-        \begin{tabular}{@{}p{1.6in} l@{}}
+        \begin{tabular}{@{}p{1.2in} l@{}}
             \textbf{Languages} & Go, Python, C++, Dart \\
-            \textbf{Backend} & Microservices, REST APIs, gRPC, Kafka \\
-            \textbf{Databases \& Cache} & PostgreSQL, Redis \\
-            \textbf{DevOps \& Tools} & Docker, Linux, Git, Postman, k6, Flutter, React, FastAPI
+            \textbf{Backend} & Microservices, REST APIs, gRPC, Kafka, FastAPI \\
+            \textbf{Databases} & PostgreSQL, Redis, Apache Solr, Memgraph \\
+            \textbf{DevOps \& UI} & Docker, Linux, Git, Grafana k6, Flutter, React
         \end{tabular}
     }}
     \end{itemize}
@@ -107,18 +107,20 @@
 
     \resumeSubheading
       {Software Engineering Intern}{Jun 2026 -- Jul 2026}
-      {Tripple Double}{Remote}
+      {COPIOUS $|$ Tripple Double}{Remote}
       \resumeItemListStart
-        \resumeItem{Built \textbf{Flutter} web app interfacing with AI \textbf{OCR} pipeline for \textbf{FIBA} scoresheet verification.}
-        \resumeItem{Automated real-time \textbf{PostgreSQL} database updates for player stats upon verification.}
+        \resumeItem{Built a \textbf{Flutter} split-screen web portal with auto-save and rule-based validation for \textbf{FIBA} scoresheet digitization.}
+        \resumeItem{Engineered a \textbf{VLM} OCR pipeline via \textbf{OpenRouter}, A/B testing models to optimize accuracy vs. cost.}
+        \resumeItem{Reduced hallucination and token costs via a 2-pass pipeline using dynamic prompts and \textbf{JSON} key aliasing.}
+        \resumeItem{Cut operator cost by \textbf{80\%} (\$0.52 $\rightarrow$ \$0.10) and entry time by \textbf{73\%} (30m $\rightarrow$ 8m) via pre-filled entry.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Flutter Developer Intern}{Dec 2024 to Feb 2025}
       {\href{https://www.linkedin.com/company/vrajpath-itech-llp/}{Vrajpath iTech LLP}}{Remote}
       \resumeItemListStart
-        \resumeItem{Cut API calls by \textbf{$\sim$30\%} via \textbf{Riverpod} state caching (measured via \textbf{Dart DevTools}).}
-        \resumeItem{Integrated \textbf{Google Maps} and \textbf{Razorpay} SDKs.}
+        \resumeItem{Reduced API requests by \textbf{$\sim$30\%} via \textbf{Riverpod} state caching, validated in \textbf{Dart DevTools}.}
+        \resumeItem{Integrated \textbf{Razorpay} for secure payments and \textbf{Google Maps} for real-time geolocation.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -130,63 +132,46 @@
       \resumeProjectHeading
           {\textbf{TradeOrders -- Order Matching Engine} $|$ \emph{Go, Kafka, PostgreSQL, Redis, Docker} $|$ \href{https://github.com/dis70rt/TradeOrders}{\color{blue}\underline{GitHub}}}
           {Oct 2025}
+          \item \small{\textit{Solved lock contention in high-volume trading via an event-driven architecture, scaling throughput 18x.}}\vspace{-2pt}
           \resumeItemListStart
-            \resumeItem{Built event-driven trade clearing engine using \textbf{Go} microservices and \textbf{Kafka}.}
-            \resumeItem{Achieved \textbf{18.2k req/sec} throughput and \textbf{231ms p95} latency (k6 load test, \textbf{7624 VUs}, Intel i5).}
-            \resumeItem{Implemented \textbf{Kafka key partitioning} for lock-free, sequential order matching.}
+            \resumeItem{Decoupled API from DB via \textbf{Kafka}; throughput rose from \textbf{1k req/s} to \textbf{18.8k req/s} (0 errors).}
+            \resumeItem{Partitioned \textbf{Kafka} topics by instrument for lock-free, sequential matching per symbol.}
+            \resumeItem{\textbf{Grafana k6} load tested at \textbf{7,624 VUs}: \textbf{18.2k req/sec} sustained, \textbf{p95 231ms} on Intel i5-13500HX.}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{Bluppi -- Shared Music Playback} $|$ \emph{Go, gRPC, PostgreSQL, Redis, Solr, Flutter} $|$ \href{https://github.com/dis70rt/bluppi-backend}{\color{blue}\underline{Backend}} \href{https://github.com/dis70rt/bluppi-frontend}{\color{blue}\underline{Frontend}}}
           {May 2025}
+          \item \small{\textit{A real-time synchronization engine that fixes network lag across distributed devices.}}\vspace{-2pt}
           \resumeItemListStart
-            \resumeItem{Built distributed \textbf{Go} music streaming backend with \textbf{PTP-style clock sync}.}
-            \resumeItem{Sustained \textbf{51k+ concurrent connections} (0 errors, \textbf{15ms p99} connect) via \textbf{gRPC} presence gateway.}
-            \resumeItem{Validated performance via 5min custom \textbf{Go} load client on Intel i5-13500HX (16GB RAM).}
-            \resumeItem{Implemented ephemeral real-time messaging via \textbf{Redis Pub/Sub}.}
+            \resumeItem{Uses \textbf{PTP-style} clock negotiation and \textbf{quorum-based} buffering to coordinate playback.}
+            \resumeItem{Tracks online presence via a \textbf{gRPC} gateway: \textbf{51k} concurrent connections, 0 errors, \textbf{p99 connect 15ms}.}
+            \resumeItem{Live ephemeral chat via \textbf{Redis Pub/Sub}, social features via \textbf{Memgraph}, and a 500GB catalog via \textbf{Solr}.}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{QQL -- Approximate Query Processing Shell} $|$ \emph{Python, PostgreSQL} $|$ \href{https://github.com/dis70rt/qql}{\color{blue}\underline{GitHub}}}
           {Aug 2025}
+          \item \small{\textit{A shell sitting above PostgreSQL that accelerates massive dataset aggregations 10x using bounded statistical error.}}\vspace{-2pt}
           \resumeItemListStart
-            \resumeItem{Built interactive \textbf{SQL shell} using \textbf{statistical sampling} to achieve \textbf{10x speedup} with controlled error bounds.}
+            \resumeItem{Uses a pilot query to estimate sample sizes, supporting \textbf{COUNT, SUM, AVG} with configurable error bounds.}
+            \resumeItem{Benchmarked: \textbf{10x speedup} at 5\% error bound; \textbf{6x} at 1\% error (vs exact query).}
+            \resumeItem{Special Mention, \textbf{e6Data Hackathon 2024}.}
           \resumeItemListEnd
           
-      \resumeProjectHeading
-          {\textbf{WizFlow -- Workflow Engine} $|$ \emph{Python, FastAPI, Redis}}
-          {Apr 2025}
-          \resumeItemListStart
-            \resumeItem{Built asynchronous workflow engine with \textbf{React}, \textbf{FastAPI}, and \textbf{Redis} task queues.}
-          \resumeItemListEnd
+
 
       \resumeProjectHeading
-          {\textbf{SubPaper -- Reddit Wallpapers App} $|$ \emph{Flutter, Go} $|$ \href{https://app.saikat.in/subpaper}{\color{blue}\underline{Play Store}}}
+          {\textbf{SubPaper -- Reddit Wallpapers App} \emph{(Archived)} $|$ \emph{Flutter}}
           {Apr 2024}
+          \item \small{\textit{A mobile application that aggregates and caches high-res wallpapers directly from Reddit.}}\vspace{-2pt}
           \resumeItemListStart
-            \resumeItem{Published \textbf{Flutter} wallpaper app to Play Store (\textbf{300+ downloads}, 4.5 rating).}
-            \resumeItem{Integrated \textbf{Reddit APIs} for dynamic content and \textbf{AdMob} for monetization.}
+            \resumeItem{Published \textbf{Reddit} wallpaper app to Play Store. \textbf{300+ downloads}, \textbf{4.5/5 rating}.}
+            \resumeItem{Implemented on-device caching for fast content delivery and integrated \textbf{AdMob} for monetization.}
           \resumeItemListEnd
           
     \resumeSubHeadingListEnd
 
-% LEADERSHIP
-\section{Leadership}
-    \resumeSubHeadingListStart
-    
-      \resumeProjectHeading
-          {\textbf{Event Executive} $|$ \emph{Club of Programmers, IIT (BHU)}}{2024 to Present}
-          \resumeItemListStart
-            \resumeItem{Delivered \textbf{Flutter} and \textbf{REST API} workshops to \textbf{200+} students across multiple sessions.}
-          \resumeItemListEnd
-          
-      % \resumeProjectHeading
-      %     {\textbf{Creative Executive} $|$ \emph{Kashiyatra, IIT (BHU)}}{2024}
-      %     \resumeItemListStart
-      %       \resumeItem{Improved creative presence across 9 events for Kashiyatra to increase audience engagement.}
-      %     \resumeItemListEnd
-          
-    \resumeSubHeadingListEnd
 
 % ACHIEVEMENTS
 \section{Achievements}
@@ -199,10 +184,10 @@
           {\textbf{\href{https://leetcode.com}{LeetCode}} \emph{(Rating: \textbf{1681}, \textbf{234} Solved)} $|$ \textbf{\href{https://codeforces.com/profile/saikat_das}{Codeforces}} \emph{(Max Rating: \textbf{1282}, \textbf{150+} Solved)}}{Present}
       \resumeProjectHeading
           {\textbf{e6Data Hackathon} $|$ \emph{Special Mention for QQL System}}{2024}
-      \resumeProjectHeading
-          {\textbf{JEE Advanced 2023} $|$ \emph{AIR 13757 (Top 9\% of qualified candidates)}}{2023}
-      \resumeProjectHeading
-          {\textbf{JEE Mains 2023} $|$ \emph{AIR 8166 (Top 1\% of 1.1 Million candidates)}}{2023}
+      % \resumeProjectHeading
+      %     {\textbf{JEE Advanced 2023} $|$ \emph{AIR 13757 (Top 9\% of qualified candidates)}}{2023}
+      % \resumeProjectHeading
+      %     {\textbf{JEE Mains 2023} $|$ \emph{AIR 8166 (Top 1\% of 1.1 Million candidates)}}{2023}
     \resumeSubHeadingListEnd
 
 \end{document}
