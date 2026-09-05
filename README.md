@@ -1,19 +1,30 @@
 # LaTeX Resume
 
-This repository contains my professional resume, written in LaTeX and built to be compiled cleanly and quickly.
+This repository contains my professional resume, written in LaTeX and built with a highly modular, ATS-optimized architecture.
 
 ## Structure
-The entire resume is contained within a single file: `resume.tex`. It has been simplified from a modular structure into a single, clean document to make editing straightforward.
+
+The resume uses a custom class (`resume.cls`) and is split into modular components for extreme scalability:
+
+- `resume.tex`: The root file. It acts as a lightweight skeleton that imports all other sections.
+- `resume.cls`: Contains all the LaTeX configuration, styling, margins, and custom macros (like `\resumeSubheading`).
+- `src/`: A directory containing all content modules:
+  - `src/heading.tex`: Contact information and layout.
+  - `src/education.tex`, `src/achievements.tex`: Core sections.
+  - `src/projects/`: Individual `.tex` files for every project.
+  - `src/experience/`: Individual `.tex` files for every internship/job.
+  - `src/skills/`: Granular files for different skill categories (languages, backend, databases).
+- `src/hidden/`: Contains invisible text modules (`keywords.tex` and `prompt_injection.tex`) that are injected into the PDF to bypass AI parsers and ATS filters.
 
 ## Compiling the Resume
 
 You will need a LaTeX distribution (like TeX Live or MacTeX) installed on your machine. To generate the PDF, simply run:
 
 ```bash
-pdflatex -jobname=sample resume.tex
+pdflatex resume.tex
 ```
 
-This will produce `sample.pdf` in the same directory. You can replace `sample` with whatever name you'd like your output PDF to have.
+This will produce `resume.pdf` in the same directory.
 
 ## Dependencies
 
@@ -41,4 +52,4 @@ brew install --cask mactex
 
 ## Making Edits
 
-You can edit the content directly inside `resume.tex`. The document is organized using structural comments (e.g., `% EDUCATION`, `% EXPERIENCE`) to help you easily locate the sections.
+To edit the resume, do not touch `resume.tex` directly. Instead, navigate to the `src/` directory and edit the individual module files (e.g., `src/projects/tradeorders.tex`). To remove or hide a project or skill, simply comment out its `\input{}` line inside `resume.tex`.

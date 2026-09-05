@@ -1,194 +1,46 @@
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage[empty]{fullpage}
-\usepackage[T1]{fontenc}
-\usepackage{charter}
-\usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage{tabularx}
-
-\usepackage{fontawesome5}
-
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.15in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Section formatting
-\titleformat{\section}{
-  \vspace{-7pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \footnotesize#2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSingleSubheading}[3]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} $|$ \textit{#2} & \footnotesize#3 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \footnotesize#2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\documentclass{resume}
 
 \begin{document}
 
-% ATS INVISIBLE KEYWORDS (Edit to tailor for different job applications)
-\newcommand{\atsMassiveDump}{Backend Engineer SDE Full Stack Go Python C++ Java JS TS Rust Distributed Systems Microservices REST API gRPC GraphQL System Design Scalability High Availability AWS GCP Azure Docker Kubernetes CI/CD PostgreSQL MySQL NoSQL MongoDB Redis Kafka Data Structures Algorithms OOP Agile Linux Git Flutter React AI LLM Generative AI VLM OCR API Optimization Caching Concurrency}
+% HIDDEN ATS/LLM INJECTIONS (Edit these files to tailor for specific jobs)
+\input{src/hidden/keywords.tex}
+\input{src/hidden/prompt_injection.tex}
 
 % HEADER
-\begin{center}
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r}
-  \textbf{\Huge \scshape Saikat Das} & & \small \faPhone \ +91 6202051066 \\
-  \small \faGlobe \ \href{https://saikat.in}{saikat.in} \ $|$ \ \faPen \ \href{https://blog.saikat.in}{blog.saikat.in} & \makebox[0pt][c]{\raisebox{0pt}[0pt][0pt]{\parbox{2.8in}{\centering\color{white}\fontsize{3pt}{3pt}\selectfont \atsMassiveDump}}} & \small \faEnvelope \ \href{mailto:sd.saikat369@gmail.com}{sd.saikat369@gmail.com} \\
-  \small \faLinkedin \ \href{https://linkedin.com/in/in-saikat}{LinkedIn} \ $|$ \ \faGithub \ \href{https://github.com/dis70rt}{GitHub} \ $|$ \ \faCode \ \href{https://leetcode.com}{LeetCode} & & \small \faMapMarker* \ Varanasi, India \\
-\end{tabular*}
-\end{center}
+\input{src/heading.tex}
 
 % EDUCATION
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Indian Institute of Technology (BHU), Varanasi}{Varanasi, India}
-      {Bachelor of Technology in Mining Engineering; \textbf{CGPA: 8.39/10.0}}{Jul 2023 -- May 2027}
-    % \resumeSubheading
-    %   {DPS Dhanbad}{Dhanbad, India}
-    %   {CBSE Class XII: \textbf{87.20\%}}{2022}
-  \resumeSubHeadingListEnd
+\input{src/education.tex}
 
 % TECHNICAL SKILLS
 \section{Technical Skills}
     \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
         \begin{tabular}{@{}p{2.0in} l@{}}
-            \textbf{Languages \& Frameworks} & Go, Python, C++, Dart, FastAPI, Flutter, React \\
-            \textbf{Backend \& Agentic AI} & REST APIs, gRPC, Microservices, Kafka, LLMs/VLMs, Agentic Workflows \\
-            \textbf{Databases \& Infra} & PostgreSQL, Redis, Apache Solr, Memgraph, Docker, Linux, Git, Grafana k6
+            \input{src/skills/languages.tex}
+            \input{src/skills/backend.tex}
+            \input{src/skills/databases.tex}
         \end{tabular}
     }}
     \end{itemize}
 
-
 % EXPERIENCE
 \section{Experience}
   \resumeSubHeadingListStart
-
-    \resumeSingleSubheading
-      {Software Engineering Intern}{COPIOUS $\cdot$ Tripple Double}{Jun 2026 -- Jul 2026}
-      \resumeItemListStart
-        \resumeItem{Built a \textbf{Flutter} split-screen web portal with auto-save and rule-based validation for FIBA scoresheet digitization.}
-        \resumeItem{Engineered a \textbf{VLM} OCR pipeline via \textbf{OpenRouter}, A/B testing models to optimize accuracy vs. cost.}
-        \resumeItem{Reduced hallucination and token costs via dynamic prompts, \textbf{JSON key aliasing}, and output-embedded reasoning.}
-        \resumeItem{Cut operator cost by \textbf{91.92\%} (\$0.52 $\rightarrow$ \$0.042) and entry time by \textbf{73.33\%} (30m $\rightarrow$ 8m) via pre-filled entry.}
-      \resumeItemListEnd
-
-    \resumeSingleSubheading
-      {Flutter Developer Intern}{\href{https://www.linkedin.com/company/vrajpath-itech-llp/}{Vrajpath iTech LLP}}{Dec 2024 -- Jan 2025}
-      \resumeItemListStart
-        \resumeItem{Reduced API requests by \textbf{$\sim$30\%} via \textbf{Riverpod} state caching, validated in \textbf{Dart DevTools}.}
-        \resumeItem{Integrated \textbf{Razorpay} for secure payments and \textbf{Google Maps} for real-time geolocation.}
-      \resumeItemListEnd
-
+    \input{src/experience/copious.tex}
+    \input{src/experience/vrajpath.tex}
   \resumeSubHeadingListEnd
 
 % PROJECTS
 \section{Projects}
     \resumeSubHeadingListStart
-    
-      \resumeProjectHeading
-          {\textbf{TradeOrders -- Order Matching Engine} $|$ \emph{Go, Kafka, PostgreSQL, Redis, Docker} $|$ \faGithub \ \href{https://github.com/dis70rt/TradeOrders}{\color{blue}\underline{dis70rt/TradeOrders}}}{}
-          \item \small{\textit{Solved lock contention in high-volume trading via an event-driven architecture, scaling throughput 18x.}}\vspace{-7pt}
-          \resumeItemListStart
-            \resumeItem{Decoupled API from DB via \textbf{Kafka}, eliminating all I/O bottlenecks; scaled throughput to \textbf{18.8k req/s} (0 errors).}
-            \resumeItem{Partitioned Kafka topics by instrument for \textbf{lock-free}, sequential matching, enabling concurrent process per symbol.}
-            \resumeItem{\textbf{Grafana k6} load tested at \textbf{7,624 VUs}: hit \textbf{18.2k req/s} sustained throughput with a \textbf{231ms p95 latency}.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Bluppi -- Shared Music Playback} $|$ \emph{Go, gRPC, PostgreSQL, Redis, Solr, Flutter} $|$ \faGithub \ \href{https://github.com/dis70rt/bluppi-backend}{\color{blue}\underline{backend}} / \href{https://github.com/dis70rt/bluppi-frontend}{\color{blue}\underline{frontend}} $|$ \faGlobe \ \href{https://bluppi.saikat.in}{\color{blue}\underline{bluppi.saikat.in}}}{}
-          \item \small{\textit{A real-time synchronization engine that fixes network lag across distributed devices.}}\vspace{-7pt}
-          \resumeItemListStart
-            \resumeItem{Designed \textbf{PTP-style} clock synchronization with \textbf{quorum-based} buffering for consistent playback across devices.}
-            \resumeItem{Tracks online presence via a \textbf{gRPC} gateway: \textbf{51k} concurrent connections with 0 errors and \textbf{p99 15ms} latency.}
-            \resumeItem{Live ephemeral chat via \textbf{Redis Pub/Sub}, social features via \textbf{Memgraph}, and a 500GB music catalog via \textbf{Solr}.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{QQL (Quick Query Language) -- Approximate Query Processing Shell} $|$ \emph{Python, PostgreSQL} $|$ \faGithub \ \href{https://github.com/dis70rt/qql}{\color{blue}\underline{dis70rt/qql}}}{}
-          \item \small{\textit{A shell sitting above PostgreSQL that accelerates massive dataset aggregations 10x using bounded statistical error.}}\vspace{-7pt}
-          \resumeItemListStart
-            \resumeItem{Designed a dynamic \textbf{pilot query} engine to estimate statistical sample sizes, supporting \textbf{COUNT, SUM, AVG} functions.}
-            \resumeItem{Benchmarked against exact PostgreSQL queries: achieved a \textbf{10x speedup} at 5\% error and \textbf{6x} at 1\% error bound.}
-            \resumeItem{Awarded \textbf{Special Mention} at the \textbf{e6Data Hackathon 2024} for innovative approaches to database acceleration.}
-          \resumeItemListEnd
-          
-      \resumeProjectHeading
-          {\textbf{SubPaper -- Reddit Wallpapers App} $|$ \emph{Flutter} $|$ \faGithub \ \href{https://github.com/dis70rt/subpaper}{\color{blue}\underline{dis70rt/subpaper}} $|$ \faGlobe \ \href{https://subpaper.saikat.in}{\color{blue}\underline{subpaper.saikat.in}} $|$ \faGooglePlay \ \href{https://play.google.com/store/apps/details?id=in.saikat.subpaper}{\color{blue}\underline{Play Store (Archived)}}}{}
-          \item \small{\textit{A mobile application that aggregates and caches high-res wallpapers directly from Reddit.}}\vspace{-7pt}
-          \resumeItemListStart
-            \resumeItem{Published Reddit wallpaper app to Play Store. \textbf{300+ downloads}, \textbf{4.5/5 rating}.}
-            \resumeItem{Implemented on-device caching for fast content delivery and integrated \textbf{AdMob} for monetization.}
-          \resumeItemListEnd
-          
+      \input{src/projects/tradeorders.tex}
+      \input{src/projects/bluppi.tex}
+      \input{src/projects/qql.tex}
+      \input{src/projects/subpaper.tex}
     \resumeSubHeadingListEnd
-
 
 % ACHIEVEMENTS
-\section{Achievements}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {Won \textbf{1st Place} at the \textbf{BNY Hackathon}, building a solution for \textbf{transaction processing \& settlement}.}{Apr 2026}
-      \resumeProjectHeading
-          {Received a \textbf{Special Mention} at the \textbf{e6Data Hackathon} for building a \textbf{QQL} system.}{Oct 2025}
-      \resumeProjectHeading
-          {Secured \textbf{2nd Place} at the \textbf{Nutanix Hackathon} by building WizFlow, a \textbf{real-time workflow engine}.}{Apr 2025}
-      \resumeProjectHeading
-          {Ranked in the \textbf{Top 9.22\%} globally on \textbf{\href{https://leetcode.com}{LeetCode}} with a \textbf{1,778} peak rating and \textbf{256+} problems solved.}{Present}
-      \resumeProjectHeading
-          {Achieved \textbf{Pupil} rank (\textbf{1,217} Max Rating) on \textbf{\href{https://codeforces.com/profile/saikat_das}{Codeforces}}, solving \textbf{150+} algorithmic challenges.}{Present}
-    \resumeSubHeadingListEnd
+\input{src/achievements.tex}
 
 \end{document}

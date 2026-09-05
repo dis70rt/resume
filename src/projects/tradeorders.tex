@@ -1,0 +1,8 @@
+\resumeProjectHeading
+    {\textbf{TradeOrders -- Order Matching Engine} $|$ \emph{Go, Kafka, PostgreSQL, Redis, Docker} $|$ \faGithub \ \href{https://github.com/dis70rt/TradeOrders}{\color{blue}\underline{dis70rt/TradeOrders}}}{}
+    \item \small{\textit{Solved lock contention in high-volume trading via an event-driven architecture, scaling throughput 18x.}}\vspace{-7pt}
+    \resumeItemListStart
+      \resumeItem{Decoupled API from DB via \textbf{Kafka}, eliminating all I/O bottlenecks; scaled throughput to \textbf{18.8k req/s} (0 errors).}
+      \resumeItem{Partitioned Kafka topics by instrument for \textbf{lock-free}, sequential matching, enabling concurrent process per symbol.}
+      \resumeItem{\textbf{Grafana k6} load tested at \textbf{7,624 VUs}: hit \textbf{18.2k req/s} sustained throughput with a \textbf{231ms p95 latency}.}
+    \resumeItemListEnd
